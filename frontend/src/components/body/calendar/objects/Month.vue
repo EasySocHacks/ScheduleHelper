@@ -1,9 +1,12 @@
 <template>
 	<div class="month">
-		<div class="header">
-			<DayOfWeek/>
+		<h2>{{monthLabel}}</h2>
+		<div class="innerDiv">
+			<div class="header">
+				<DayOfWeek/>
+			</div>
+			<Day class="day" v-for="day in days" :key="day" v-bind:day="day"/>
 		</div>
-		<Day class="day" v-for="day in days" :key="day" v-bind:day="day"/>
 	</div>
 </template>
 
@@ -15,6 +18,10 @@
 		props: {
 			daysCount: {
 				type: Number,
+				required: true
+			},
+			monthLabel: {
+				type: String,
 				required: true
 			}
 		},
@@ -43,12 +50,15 @@
 	.month {
 		display: inline-table;
 
+		text-align: left;
+	}
+
+	.innerDiv {
 		width: 330px;
 		height: 335px;
 
 		border: 1px solid black;
 		border-radius: 5px;
-		text-align: left;
 
 		background: #FAF3EB;
 	}

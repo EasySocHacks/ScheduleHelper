@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<Month v-for="days in monthsDaysCount" :key="days" v-bind:days-count="days"/>
+		<Month v-for="(days, index) in monthsDaysCount" :key="days" v-bind:days-count="days" v-bind:month-label="monthsLabels[index]"/>
 	</div>
 </template>
 
@@ -21,6 +21,8 @@ export default {
 	data() {
 		return {
 			monthsDaysCount: [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31],
+			monthsLabels: ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь",
+				"Ноябрь", "Декабрь"]
 		}
 	},
 	methods: {

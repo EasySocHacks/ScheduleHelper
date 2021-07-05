@@ -1,15 +1,15 @@
 <template>
 	<div>
-		<Year v-bind:year="2021"/>
+		<YearPage v-bind:year="2021"/>
 	</div>
 </template>
 
 <script>
-	import Year from './Year'
+	import YearPage from "./pages/YearPage";
 
 	export default {
 		components: {
-			Year
+			YearPage
 		}
 	}
 </script>
