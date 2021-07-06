@@ -1,6 +1,7 @@
 <template>
 	<div>
-		<Month v-for="(days, index) in monthsDaysCount" :key="days" v-bind:days-count="days" v-bind:month-label="monthsLabels[index]"/>
+		<Month v-for="monthNumber in monthNumberArray" :key="monthNumber" v-bind:month-number="monthNumber"
+			v-bind:year-number="year"/>
 	</div>
 </template>
 
@@ -20,31 +21,14 @@ export default {
 	},
 	data() {
 		return {
-			monthsDaysCount: [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31],
-			monthsLabels: ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь",
-				"Ноябрь", "Декабрь"]
-		}
-	},
-	methods: {
-		isLeap: function (year) {
-			return (year && ((year % 4 === 0) && (year % 100 !== 0) || (year % 400 === 0)));
-		}
-	},
-	beforeMount() {
-		if (this.isLeap(this.year)) {
-			this.monthsDaysCount[1] = 29;
+			monthNumberArray: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
 		}
 	}
 }
 </script>
 
 <style scoped>
-	div {
-		margin: 10px;
-	}
-
-	.year {
-		margin-top: 30px;
-		width: 100%;
-	}
+div {
+	margin: 10px;
+}
 </style>
