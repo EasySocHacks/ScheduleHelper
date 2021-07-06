@@ -1,5 +1,5 @@
 <template>
-	<div class="day">
+	<div class="day" v-bind:class="{empty: day === 0}">
 		{{ day }}
 	</div>
 </template>
@@ -29,5 +29,9 @@
 		height: 35px;
 
 		text-align: center;
+	}
+
+	.empty {
+		visibility: hidden;
 	}
 </style>
