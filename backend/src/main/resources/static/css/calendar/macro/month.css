@@ -1,0 +1,30 @@
+.month-macro-div {
+    border: 1px solid black;
+    border-radius: 5px;
+
+    width: 355px;
+    height: 330px;
+
+    text-align: left;
+    display: inline-block;
+}
+
+.month-macro-header-div {
+    background: lightgray;
+
+    width: 100%;
+    height: 45px;
+}
+
+.month-macro-header-dayOfWeekTitle-div {
+    margin: 6px;
+
+    font-size: 15px;
+
+    width: 35px;
+    height: 35px;
+
+    display: inline-block;
+
+    text-align: center;
+}

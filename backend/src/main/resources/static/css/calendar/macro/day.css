@@ -1,0 +1,19 @@
+.day-macro-div {
+    border: 1px solid black;
+    border-radius: 5px;
+
+    font-size: 25px;
+
+    width: 35px;
+    height: 35px;
+
+    margin: 5px;
+
+    display: inline-block;
+
+    text-align: center;
+}
+
+.day-macro-empty {
+    visibility: hidden;
+}

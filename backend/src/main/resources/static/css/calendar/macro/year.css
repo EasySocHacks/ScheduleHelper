@@ -1,0 +1,10 @@
+.year-macro-div {
+    display: inline-flex;;
+    flex-wrap: wrap;
+
+    width: 100%;
+}
+
+.year-macro-month-div {
+    margin: 9px;
+}

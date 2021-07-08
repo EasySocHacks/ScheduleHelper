@@ -1,5 +1,5 @@
 <#import "common.ftlh" as c>
 
 <@c.page>
-    Middle
+    Index
 </@c.page>
