@@ -6,6 +6,10 @@
             <meta charset="UTF-8">
             <title>Schedule Helper</title>
             <link rel="stylesheet" type="text/css" href="<@spring.url '/css/style.css'/>">
+            <link rel="stylesheet" type="text/css" href="<@spring.url '/css/calendar/monthPage.css'/>">
+            <link rel="stylesheet" type="text/css" href="<@spring.url '/css/calendar/macro/day.css'/>">
+            <link rel="stylesheet" type="text/css" href="<@spring.url '/css/calendar/macro/month.css'/>">
+            <link rel="stylesheet" type="text/css" href="<@spring.url '/css/calendar/macro/year.css'/>">
         </head>
         <body>
             <header>
