@@ -1,16 +1,16 @@
+<#-- @ftlvariable name="yearMonthCount" type="java.lang.Integer" -->
+<#-- @ftlvariable name="yearMonthsDayCountArray" type="java.lang.Integer[]" -->
+<#-- @ftlvariable name="yearMonthsTitleArray" type="java.lang.String[]" -->
+<#-- @ftlvariable name="monthsCodeArray" type="java.lang.Integer[]" -->
+
 <#import "MonthMacro.ftlh" as month_macro/>
 
 <#macro year year>
-    <#assign yearMonthCount=12/>
-    <#assign yearMonthsDayCountArray=[31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]/>
-    <#assign yearMonthsTitleArray=["Январь", "Феврпль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь",
-        "Октябрь", "Ноябрь", "Декабрь"]/>
-    <#assign monthCodes=[1, 4, 4, 0, 2, 5, 0, 3, 6, 1, 4, 6]/>
     <#assign yearCode=(6 + (year % 100) + ((year % 100) / 4)) % 7/>
 
     <div class="year-macro-div">
         <#list 0..<yearMonthCount as i>
-            <#assign daysToSkip=(6 + ((monthCodes[i] + yearCode) % 7)) % 7/>
+            <#assign daysToSkip=(6 + ((monthsCodeArray[i] + yearCode) % 7)) % 7/>
 
             <div class="year-macro-month-div">
                 <#if i == 1 && ((year % 400 == 0) || (year % 4 == 0 && year % 100 != 0))>

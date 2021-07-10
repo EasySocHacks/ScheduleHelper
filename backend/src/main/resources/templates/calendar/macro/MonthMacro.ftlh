@@ -1,3 +1,5 @@
+<#-- @ftlvariable name="dayOfWeekShortTitleArray" type="java.lang.String[]" -->
+
 <#import "DayMacro.ftlh" as day_macro>
 
 <#macro month monthDaysCount skipDaysCount monthTitle>
@@ -5,7 +7,6 @@
 
     <div class="month-macro-div">
         <div class="month-macro-header-div">
-            <#assign dayOfWeekShortTitleArray=["Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс"]/>
             <#list dayOfWeekShortTitleArray as dayOfWeekTitle>
                 <div class="month-macro-header-dayOfWeekTitle-div">
                     <span>

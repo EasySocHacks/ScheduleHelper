@@ -1,4 +1,4 @@
-package easy.soc.hacks.ScheduleHelper.controllers;
+package easy.soc.hacks.ScheduleHelper.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
