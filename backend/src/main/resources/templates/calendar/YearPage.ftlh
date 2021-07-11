@@ -1,6 +1,6 @@
 <#-- @ftlvariable name="yearNumber" type="java.lang.Integer" -->
 
-<#import "../common.ftlh" as c>
+<#import "../common/Common.ftlh" as c>
 <#import  "macro/YearMacro.ftlh" as year_macro>
 
 <@c.page>

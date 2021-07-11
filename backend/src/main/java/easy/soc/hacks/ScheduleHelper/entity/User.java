@@ -1,8 +1,10 @@
-package easy.soc.hacks.ScheduleHelper.domain;
+package easy.soc.hacks.ScheduleHelper.entity;
 
 import com.sun.istack.NotNull;
+import org.hibernate.annotations.CreationTimestamp;
 
 import javax.persistence.*;
+import java.util.Date;
 import java.util.List;
 
 @Entity
@@ -16,6 +18,9 @@ public class User {
 
     @NotNull
     private String login;
+
+    @CreationTimestamp
+    private Date creationTime;
 
     @NotNull
     @OneToMany
@@ -35,6 +40,14 @@ public class User {
 
     public void setLogin(String login) {
         this.login = login;
+    }
+
+    public Date getCreationTime() {
+        return creationTime;
+    }
+
+    public void setCreationTime(Date creationTime) {
+        this.creationTime = creationTime;
     }
 
     public List<Task> getTasks() {

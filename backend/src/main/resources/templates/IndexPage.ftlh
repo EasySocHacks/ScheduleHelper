@@ -1,4 +1,4 @@
-<#import "common.ftlh" as c>
+<#import "common/Common.ftlh" as c>
 
 <@c.page>
     Index

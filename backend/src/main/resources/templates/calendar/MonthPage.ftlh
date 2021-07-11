@@ -2,7 +2,7 @@
 <#-- @ftlvariable name="skipDaysCount" type="java.lang.Integer" -->
 <#-- @ftlvariable name="monthTitle" type="java.lang.String" -->
 
-<#import "../common.ftlh" as c>
+<#import "../common/Common.ftlh" as c>
 <#import  "macro/MonthMacro.ftlh" as month_macro>
 
 <@c.page>

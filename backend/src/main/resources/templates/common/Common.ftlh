@@ -1,4 +1,6 @@
 <#import "/spring.ftl" as spring/>
+<#import "Header.ftlh" as Header/>
+
 <#macro page>
     <!DOCTYPE html>
     <html lang="en">
@@ -13,7 +15,7 @@
         </head>
         <body>
             <header>
-                <h2>Header</h2>
+                <@Header.header/>
                 <hr>
             </header>
             <main>
