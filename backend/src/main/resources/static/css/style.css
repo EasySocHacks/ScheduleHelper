@@ -1,3 +1,41 @@
 body {
     text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background: #e8e8e8;
+}
+
+.header-site-title-div {
+    text-align: left;
+
+    display: inline-block;
+}
+
+.header-language-and-login-register-div {
+    text-align: right;
+
+    display: inline-block;
+}
+
+.header-language-div {
+    padding: 20px 20px 10px 20px;
+}
+
+.header-language-div > a > img {
+    width: 30px;
+    height: 20px;
+
+    margin: 5px;
+}
+
+.header-login-register-div {
+    padding: 10px 20px 20px 20px;
+}
+
+.footer-GitHubLogo-img {
+    width: 20px;
+    height: 20px;
 }

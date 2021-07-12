@@ -1,5 +1,8 @@
+<#-- @ftlvariable name="user" type="easy.soc.hacks.ScheduleHelper.entity.User" -->
+
 <#import "/spring.ftl" as spring/>
 <#import "Header.ftlh" as Header/>
+<#import "Footer.ftlh" as Footer/>
 
 <#macro page>
     <!DOCTYPE html>
@@ -14,7 +17,7 @@
             <link rel="stylesheet" type="text/css" href="<@spring.url '/css/calendar/macro/year.css'/>">
         </head>
         <body>
-            <header>
+            <header class="header">
                 <@Header.header/>
                 <hr>
             </header>
@@ -23,7 +26,7 @@
             </main>
             <footer>
                 <hr>
-                <h2>Footer</h2>
+                <@Footer.footer/>
             </footer>
         </body>
     </html>

@@ -28,6 +28,9 @@ public class SiteInterceptor implements HandlerInterceptor {
     private void trySetDefaults(HttpSession httpSession) {
         tryInitAttribute("language", "ENG", httpSession);
 
+        //TODO: set if present?
+        tryInitAttribute("user", null, httpSession);
+
         GlobalConstants globalConstants;
 
         try {
