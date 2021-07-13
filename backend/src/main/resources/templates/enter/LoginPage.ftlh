@@ -1,4 +1,4 @@
-<#-- @ftlvariable name="loginForm" type="easy.soc.hacks.ScheduleHelper.form.Form" -->
+<#-- @ftlvariable name="loginForm" type="easy.soc.hacks.ScheduleHelper.form.EnterForm" -->
 
 <#import "../common/Common.ftlh" as c>
 
@@ -10,7 +10,7 @@
         <form method="post">
             <input id="login" name="login" value="${loginForm.login!}">
             <input id="password" name="password" type="password" value="">
-            <input type="submit" value="Register">
+            <input type="submit" value="Login">
         </form>
     </div>
 </@c.page>

@@ -1,6 +1,6 @@
 package easy.soc.hacks.ScheduleHelper.controller;
 
-import easy.soc.hacks.ScheduleHelper.form.Form;
+import easy.soc.hacks.ScheduleHelper.form.EnterForm;
 import easy.soc.hacks.ScheduleHelper.form.validator.LoginFormValidator;
 import easy.soc.hacks.ScheduleHelper.form.validator.RegisterFormValidator;
 import easy.soc.hacks.ScheduleHelper.service.UserService;
@@ -39,40 +39,40 @@ public class EnterController extends InheritController {
 
     @GetMapping("/register")
     public String registerGet(Model model) {
-        model.addAttribute("registerForm", new Form());
+        model.addAttribute("registerForm", new EnterForm());
 
         return "/enter/RegisterPage";
     }
 
     @PostMapping("/register")
-    public String registerPost(@ModelAttribute("registerForm") Form form,
+    public String registerPost(@ModelAttribute("registerForm") EnterForm enterForm,
                                BindingResult bindingResult,
                                HttpSession httpSession) {
         if (bindingResult.hasErrors()) {
             return "/enter/RegisterPage";
         }
 
-        setUser(httpSession, userService.register(form));
+        setUser(httpSession, userService.register(enterForm));
 
         return "redirect:/";
     }
 
     @GetMapping("/login")
     public String loginGet(Model model) {
-        model.addAttribute("loginForm", new Form());
+        model.addAttribute("loginForm", new EnterForm());
 
         return "/enter/LoginPage";
     }
 
     @PostMapping("/login")
-    public String loginPost(@ModelAttribute("loginForm") Form form,
+    public String loginPost(@ModelAttribute("loginForm") EnterForm enterForm,
                             BindingResult bindingResult,
                             HttpSession httpSession) {
         if (bindingResult.hasErrors()) {
             return "/enter/LoginPage";
         }
 
-        setUser(httpSession, userService.findByLoginAndPassword(form.getLogin(), form.getPassword()));
+        setUser(httpSession, userService.findByLoginAndPassword(enterForm.getLogin(), enterForm.getPassword()));
 
         return "redirect:/";
     }

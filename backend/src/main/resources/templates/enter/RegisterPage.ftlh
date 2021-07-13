@@ -1,4 +1,4 @@
-<#-- @ftlvariable name="registerForm" type="easy.soc.hacks.ScheduleHelper.form.Form" -->
+<#-- @ftlvariable name="registerForm" type="easy.soc.hacks.ScheduleHelper.form.EnterForm" -->
 
 <#import "../common/Common.ftlh" as c>
 

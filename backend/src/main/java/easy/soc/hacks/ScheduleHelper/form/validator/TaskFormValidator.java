@@ -1,15 +1,15 @@
 package easy.soc.hacks.ScheduleHelper.form.validator;
 
-import easy.soc.hacks.ScheduleHelper.form.EnterForm;
+import easy.soc.hacks.ScheduleHelper.form.TaskForm;
 import org.springframework.stereotype.Component;
 import org.springframework.validation.Errors;
 import org.springframework.validation.Validator;
 
 @Component
-public class RegisterFormValidator implements Validator {
+public class TaskFormValidator implements Validator {
     @Override
     public boolean supports(Class<?> aClass) {
-        return EnterForm.class.equals(aClass);
+        return TaskForm.class.equals(aClass);
     }
 
     @Override

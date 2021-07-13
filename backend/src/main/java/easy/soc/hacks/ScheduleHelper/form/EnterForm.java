@@ -1,6 +1,6 @@
 package easy.soc.hacks.ScheduleHelper.form;
 
-public class Form {
+public class EnterForm {
     private String login;
 
     private String password;

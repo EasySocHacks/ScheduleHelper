@@ -1,6 +1,6 @@
 package easy.soc.hacks.ScheduleHelper.form.validator;
 
-import easy.soc.hacks.ScheduleHelper.form.Form;
+import easy.soc.hacks.ScheduleHelper.form.EnterForm;
 import org.springframework.stereotype.Component;
 import org.springframework.validation.Errors;
 import org.springframework.validation.Validator;
@@ -9,7 +9,7 @@ import org.springframework.validation.Validator;
 public class LoginFormValidator implements Validator {
     @Override
     public boolean supports(Class<?> aClass) {
-        return Form.class.equals(aClass);
+        return EnterForm.class.equals(aClass);
     }
 
     @Override
