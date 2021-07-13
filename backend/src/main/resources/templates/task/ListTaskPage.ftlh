@@ -3,7 +3,7 @@
 <#import "../common/Common.ftlh" as c>
 
 <@c.page>
-    <div>
+    <div class="task-list-div">
         <ul>
             <#list taskList as task>
                 <li>

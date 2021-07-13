@@ -1,6 +1,14 @@
 <#import "/spring.ftl" as spring/>
 
 <#macro header>
+    <div class="header-links-div">
+        <div>
+            <a href="/calendar/year"><strong>Calendar</strong></a>
+        </div>
+        <div>
+            <a href="/tasks/list"><strong>Tasks</strong></a>
+        </div>
+    </div>
     <div class="header-site-title-div">
         <strong>
             Schedule Helper

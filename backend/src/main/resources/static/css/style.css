@@ -4,8 +4,24 @@ body {
     padding: 0;
 }
 
+.error {
+    color: red;
+    font-size: 15px;
+
+    margin: 5px;
+}
+
 .header {
     background: #e8e8e8;
+}
+
+.header-links-div {
+    display: inline-block;
+}
+
+.header-links-div > div {
+    border: 1px solid black;
+    border-radius: 5px;
 }
 
 .header-site-title-div {

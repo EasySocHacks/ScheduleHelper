@@ -26,4 +26,8 @@ public class UserService {
     public User findByLoginAndPassword(String login, String password) {
         return login == null || password == null ? null : userRepository.findByLoginAndPassword(login, password);
     }
+
+    public User findByLogin(String login) {
+        return userRepository.findByLogin(login);
+    }
 }

@@ -15,6 +15,7 @@
             <link rel="stylesheet" type="text/css" href="<@spring.url '/css/calendar/macro/day.css'/>">
             <link rel="stylesheet" type="text/css" href="<@spring.url '/css/calendar/macro/month.css'/>">
             <link rel="stylesheet" type="text/css" href="<@spring.url '/css/calendar/macro/year.css'/>">
+            <link rel="stylesheet" type="text/css" href="<@spring.url '/css/task/listTask.css'/>">
         </head>
         <body>
             <header class="header">
@@ -30,4 +31,11 @@
             </footer>
         </body>
     </html>
+</#macro>
+
+<#macro error field>
+    <@spring.bind field/>
+    <#if spring.status.errorMessage??>
+        <div class="error">${spring.status.errorMessage}</div>
+    </#if>
 </#macro>

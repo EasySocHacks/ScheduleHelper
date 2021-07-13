@@ -1,0 +1,17 @@
+.task-list-div > ul {
+    list-style-type: none;
+
+    padding: 0;
+}
+
+.task-list-div > ul > li {
+    display: flex;
+    justify-content: space-between;
+
+    border: 1px solid black;
+    border-radius: 5px;
+
+    margin: 5px;
+
+    height: 40px;
+}

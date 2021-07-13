@@ -4,6 +4,10 @@ import com.sun.istack.NotNull;
 import org.hibernate.annotations.CreationTimestamp;
 
 import javax.persistence.*;
+import javax.validation.constraints.DecimalMax;
+import javax.validation.constraints.DecimalMin;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.Size;
 import java.util.Date;
 import java.util.List;
 
@@ -15,10 +19,12 @@ public class Task {
     private long id;
 
     @NotNull
+    @NotEmpty
     @ManyToOne
     private User user;
 
     @NotNull
+    @NotEmpty
     private String title;
 
     private String description;
@@ -38,6 +44,8 @@ public class Task {
     private boolean isDone = false;
 
     @NotNull
+    @DecimalMin(value = "0.0")
+    @DecimalMax(value = "1.0")
     private double progress = 0.0;
 
     public long getId() {

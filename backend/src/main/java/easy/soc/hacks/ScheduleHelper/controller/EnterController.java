@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import javax.servlet.http.HttpSession;
+import javax.validation.Valid;
 
 @Controller
 public class EnterController extends InheritController {
@@ -45,7 +46,7 @@ public class EnterController extends InheritController {
     }
 
     @PostMapping("/register")
-    public String registerPost(@ModelAttribute("registerForm") EnterForm enterForm,
+    public String registerPost(@Valid @ModelAttribute("registerForm") EnterForm enterForm,
                                BindingResult bindingResult,
                                HttpSession httpSession) {
         if (bindingResult.hasErrors()) {
@@ -65,7 +66,7 @@ public class EnterController extends InheritController {
     }
 
     @PostMapping("/login")
-    public String loginPost(@ModelAttribute("loginForm") EnterForm enterForm,
+    public String loginPost(@Valid @ModelAttribute("loginForm") EnterForm enterForm,
                             BindingResult bindingResult,
                             HttpSession httpSession) {
         if (bindingResult.hasErrors()) {

@@ -4,6 +4,8 @@ import com.sun.istack.NotNull;
 import org.hibernate.annotations.CreationTimestamp;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.Size;
 import java.util.Date;
 import java.util.List;
 
@@ -17,6 +19,7 @@ public class User {
     private long id;
 
     @NotNull
+    @NotEmpty
     private String login;
 
     @CreationTimestamp
